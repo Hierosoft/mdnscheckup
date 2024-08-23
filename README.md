@@ -110,7 +110,7 @@ pytest
 ## License
 
 mdnscheckup is licensed under the MIT License. See the
-[LICENSE](LICENSE) file for more details.
+[license.txt](license.txt) file for more details.
 
 
 ## Acknowledgments
