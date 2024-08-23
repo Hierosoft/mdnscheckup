@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"trailing-spaces.trimOnSave": true,
+		"cSpell.words": [
+			"Gustafson",
+			"ifaddr",
+			"mdns",
+			"mdnscheckup",
+			"mndscheckup",
+			"pywin32",
+			"Tcpip6",
+			"zeroconf"
+		]
+	}
+}

@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools]
+packages = ["ipv6check"]
+
+
+[project]
+name = "ipv6check"
+version = "0.1.0"
+description = "Check and troubleshoot MDNS issues on Windows 11."
+readme = { file = "readme.md", content-type = "text/markdown" }
+requires-python = ">=3.7"
+authors = [
+    {name = "Jake Gustafson", email = "7557867+Poikilos@users.noreply.github.com"}
+]
+keywords = ["IPv6", "Windows", "Network", "Adapter", "Registry"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: System :: Networking",
+    "Topic :: Utilities"
+]
+dependencies = [
+    "ifaddr>=0.1.7",
+    "pywin32>=302",
+    "zeroconf>=0.39.0",
+]
+
+
+[project.urls]
+homepage = "https://github.com/Hierosoft/ipv6check"
+repository = "https://github.com/Hierosoft/ipv6check"
+documentation = "https://github.com/Hierosoft/ipv6check/wiki"
+issues = "https://github.com/Hierosoft/ipv6check/issues"
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "flake8",
+]
+
+
+# [tool.setuptools.dynamic]
+# version = {attr = "ipv6check._version.__version__"}
+
+
+[tool.black]
+line-length = 79
+target-version = ['py37']
+
+
+[tool.flake8]
+max-line-length = 79
+extend-ignore = ["W503"]
+
+
+[project.scripts]
+mdnscheckup = "mdnscheckup.mdnscheckup:main"
+ipv6checkup = "mdnscheckup.ipv6checkup:main"
