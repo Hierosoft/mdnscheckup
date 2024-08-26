@@ -8,7 +8,7 @@ if __name__ == "__main__":
     REPO_PATH = os.path.dirname(MODULE_PATH)
     sys.path.insert(0, REPO_PATH)
 
-from mndscheckup.ipv6check import (
+from mdnscheckup.ipv6check import (
     # is_ipv6_enabled_windows,
     main as ipv6check_main,
 )
